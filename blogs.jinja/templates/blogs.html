@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rajeev's Blogs</title>
+</head>
+<body>
+    <h1> welcome to Rajeev's Blogs</h1>
+    {% for blogs in list_of_blogs: %}
+        {% if(blogs["id"]=='2') %}
+            <h4>{{ blogs['title'] }} </h4>
+        {% else %}
+
+            <h2> {{blogs['title'] }}</h2>
+            <h3>{{  blogs['subtitle']}} </h3>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
